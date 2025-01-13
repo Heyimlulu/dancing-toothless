@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toothless</title>
+    <link rel="shortcut icon" href="./icon/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/mobile.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 
+         _              _   _     _               
+        | |            | | | |   | |              
+        | |_ ___   ___ | |_| |__ | | ___  ___ ___ 
+        | __/ _ \ / _ \| __| '_ \| |/ _ \/ __/ __|
+        | || (_) | (_) | |_| | | | |  __/\__ \__ \
+         \__\___/ \___/ \__|_| |_|_|\___||___/___/
+                                                  
+                                                  
+    Welcome to the source code of this website :3
+    -->
+  </head>
+  <body class="min-h-screen flex items-center justify-center">
+    <button
+      id="btnMusicOnOff"
+      onclick="togglePlay()"
+      type="button"
+      class="transition-all ease-in-out py-5 px-10 z-10 font-mono bg-black text-gray-300 hover:bg-gray-300 hover:text-black hover:scale-125 hover:shadow-md rounded-full shadow-lg text-2xl"
+    >
+      Music On/Off
+    </button>
+    <div id="wrapper" class="opacity-60 transition-opacity">
+      <video
+        src="./assets/video/1hourloop.mp4"
+        muted
+        autoplay
+        loop
+        class="object-cover w-full h-full fixed top-0 left-0 z-0"
+      >
+        Your browser does not support the video tag.
+        <source src="./assets/video/1hourloop.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </body>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-YJ4V7HEP44"
+  ></script>
+  <script src="./js/gtag.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/title.js"></script>
+</html>
