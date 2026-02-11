@@ -54,6 +54,17 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      ::-webkit-scrollbar {
+        display: none;
+      }
+      /* Hide scrollbar for IE, Edge and Firefox */
+      body {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+      }
+    </style>
     <!-- 
          _              _   _     _               
         | |            | | | |   | |              
@@ -66,7 +77,7 @@
     Welcome to the source code of this website :3
     -->
   </head>
-  <body class="min-h-screen flex items-center justify-center overflow-hidden">
+  <body class="min-h-screen flex items-center justify-center overflow-hidden bg-black">
     <!-- Main Controls -->
     <div class="fixed bottom-10 left-1/2 transform -translate-x-1/2 z-20 flex gap-4">
       <button

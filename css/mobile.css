@@ -1,14 +1,57 @@
 /* Mobile optimizations */
 @media (max-width: 1024px) {
+  html, body {
+    background-color: #000000;
+  }
+
   /* Adjustments for smaller screens */
-  #btnMusicOnOff {
-    padding: 0.75rem 1.5rem;
-    font-size: 0.875rem; /* text-sm */
+  #btnMusicOnOff, button[onclick="toggleAbout()"], #btnInstall {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9rem;
   }
   
-  /* Ensure modal is usable on mobile */
-  #aboutModal > div {
-    width: 95%;
-    padding: 1.5rem;
+  /* Fix Social Share buttons position and size */
+  .fixed.right-6.top-6 {
+    right: 1rem;
+    top: 1rem;
+    gap: 0.75rem;
+  }
+  
+  .fixed.right-6.top-6 a {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  /* Modal Mobile Styles */
+  #modalContent {
+    width: 90% !important;
+    max-height: 85vh;
+    padding: 1.5rem !important;
+    border-radius: 1rem;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    overscroll-behavior: contain; /* Prevent body scroll when modal ends */
+  }
+
+  /* Typography adjustments for mobile modal */
+  #modalContent h1 {
+    font-size: 1.5rem; /* text-2xl equivalent */
+    line-height: 2rem;
+  }
+
+  #modalContent h2 {
+    font-size: 1.25rem; /* text-xl equivalent */
+  }
+  
+  #modalContent p, #modalContent li {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  /* Main Controls position */
+  .fixed.bottom-10 {
+    bottom: 2rem;
+    width: 90%;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
