@@ -1,46 +1,14 @@
-/* On mobile only */
+/* Mobile optimizations */
 @media (max-width: 1024px) {
-  * {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-      "Liberation Mono", "Courier New", monospace;
-  }
-  body::before {
-    content: "Please use a desktop browser for the full experience";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: beige;
-    color: #333;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 2rem;
-    font-size: 1.5rem;
-    z-index: 50;
-    animation: fadeIn 1s ease-in-out, float 3s ease-in-out infinite;
-  }
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  @keyframes float {
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-  }
-  #wrapper,
+  /* Adjustments for smaller screens */
   #btnMusicOnOff {
-    display: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem; /* text-sm */
+  }
+  
+  /* Ensure modal is usable on mobile */
+  #aboutModal > div {
+    width: 95%;
+    padding: 1.5rem;
   }
 }

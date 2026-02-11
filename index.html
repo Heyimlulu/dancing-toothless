@@ -3,8 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Toothless</title>
-    <link rel="shortcut icon" href="./icon/favicon.ico" type="image/x-icon" />
+    <title>Dancing Toothless | The Ultimate Driftveil City Meme Loop</title>
+    <meta name="description" content="Watch the viral Dancing Toothless meme loop for 1 hour. The best high-quality Driftveil City animation edits from How to Train Your Dragon.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://toothless.fun/">
+    <meta property="og:title" content="Dancing Toothless | The Ultimate Driftveil City Meme Loop">
+    <meta property="og:description" content="Watch the viral Dancing Toothless meme loop for 1 hour. The best high-quality Driftveil City animation edits from How to Train Your Dragon.">
+    <meta property="og:image" content="https://toothless.fun/assets/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://toothless.fun/">
+    <meta property="twitter:title" content="Dancing Toothless | The Ultimate Driftveil City Meme Loop">
+    <meta property="twitter:description" content="Watch the viral Dancing Toothless meme loop for 1 hour. The best high-quality Driftveil City animation edits from How to Train Your Dragon.">
+    <meta property="twitter:image" content="https://toothless.fun/assets/og-image.jpg">
+
+    <link rel="canonical" href="https://toothless.fun/">
+
+    <link rel="icon" type="image/png" href="/icons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg" />
+    <link rel="shortcut icon" href="/icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Toothless" />
+    <link rel="manifest" href="/icons/site.webmanifest" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      "name": "Dancing Toothless 1 Hour Loop",
+      "description": "The viral Dancing Toothless meme from How To Train Your Dragon, dancing to Driftveil City music. 1 hour seamless loop.",
+      "thumbnailUrl": "https://toothless.fun/assets/og-image.jpg",
+      "uploadDate": "2024-01-01T00:00:00+00:00",
+      "duration": "PT1H",
+      "contentUrl": "https://cdn.toothless.fun/toothless-1hour-loop-720p.mp4",
+      "embedUrl": "https://toothless.fun",
+      "interactionStatistic": {
+        "@type": "InteractionCounter",
+        "interactionType": { "@type": "WatchAction" },
+        "userInteractionCount": 1000000
+      }
+    }
+    </script>
+    <link rel="shortcut icon" href="./icons/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./css/mobile.css" />
     <link
       rel="stylesheet"
@@ -23,24 +66,150 @@
     Welcome to the source code of this website :3
     -->
   </head>
-  <body class="min-h-screen flex items-center justify-center">
-    <button
-      id="btnMusicOnOff"
-      onclick="togglePlay()"
-      type="button"
-      class="transition-all ease-in-out py-5 px-10 z-10 font-mono bg-black text-gray-300 hover:bg-gray-300 hover:text-black hover:scale-125 hover:shadow-md rounded-full shadow-lg text-2xl"
-    >
-      Music On/Off
-    </button>
+  <body class="min-h-screen flex items-center justify-center overflow-hidden">
+    <!-- Main Controls -->
+    <div class="fixed bottom-10 left-1/2 transform -translate-x-1/2 z-20 flex gap-4">
+      <button
+        id="btnMusicOnOff"
+        onclick="togglePlay()"
+        type="button"
+        class="transition-all ease-in-out py-4 px-8 font-mono bg-black/80 text-white backdrop-blur-sm border border-white/20 hover:bg-white hover:text-black hover:scale-110 rounded-full shadow-lg text-xl flex items-center gap-2"
+      >
+        <i class="fa-solid fa-music"></i> Music On/Off
+      </button>
+      
+      <button
+        onclick="toggleAbout()"
+        class="transition-all ease-in-out p-4 font-mono bg-black/80 text-white backdrop-blur-sm border border-white/20 hover:bg-white hover:text-black hover:scale-110 rounded-full shadow-lg text-xl"
+        aria-label="About this meme"
+      >
+        <i class="fa-solid fa-circle-info"></i>
+      </button>
+
+      <button
+        id="btnInstall"
+        onclick="installApp()"
+        class="hidden transition-all ease-in-out p-4 font-mono bg-black/80 text-white backdrop-blur-sm border border-white/20 hover:bg-white hover:text-black hover:scale-110 rounded-full shadow-lg text-xl"
+        aria-label="Install App"
+      >
+        <i class="fa-solid fa-download"></i>
+      </button>
+    </div>
+
+    <!-- Social Share Buttons -->
+    <div class="fixed right-6 top-6 z-20 flex flex-col gap-3">
+      <a href="https://twitter.com/intent/tweet?text=Check%20out%20Dancing%20Toothless%20%F0%9F%90%B2%20https%3A%2F%2Ftoothless.fun" target="_blank" rel="noopener noreferrer" class="w-12 h-12 flex items-center justify-center bg-black/50 text-white hover:bg-[#1DA1F2] rounded-full transition-all hover:scale-110 backdrop-blur-sm">
+        <i class="fa-brands fa-twitter text-xl"></i>
+      </a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftoothless.fun" target="_blank" rel="noopener noreferrer" class="w-12 h-12 flex items-center justify-center bg-black/50 text-white hover:bg-[#4267B2] rounded-full transition-all hover:scale-110 backdrop-blur-sm">
+        <i class="fa-brands fa-facebook-f text-xl"></i>
+      </a>
+      <a href="#" onclick="copyLink(event)" class="w-12 h-12 flex items-center justify-center bg-black/50 text-white hover:bg-green-600 rounded-full transition-all hover:scale-110 backdrop-blur-sm group relative">
+        <i class="fa-solid fa-link text-xl"></i>
+        <span class="absolute right-full mr-2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Copy Link</span>
+      </a>
+    </div>
+
+    <!-- About Modal (SEO Content) -->
+    <div id="aboutModal" class="fixed inset-0 z-50 hidden">
+      <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="toggleAbout()"></div>
+      <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 max-w-2xl bg-[#1a1a1a] text-gray-200 p-8 rounded-2xl shadow-2xl border border-gray-700 max-h-[90vh] overflow-y-auto">
+        <div class="flex justify-between items-start mb-6">
+          <h1 class="text-3xl font-bold text-white">The Dancing Toothless Meme</h1>
+          <button onclick="toggleAbout()" class="text-gray-400 hover:text-white transition-colors">
+            <i class="fa-solid fa-xmark text-2xl"></i>
+          </button>
+        </div>
+        
+        <div class="space-y-6 text-gray-300 leading-relaxed">
+          <p class="text-lg">
+            Welcome to <strong class="text-white">Toothless.fun</strong>, the ultimate destination for the internet's favorite dancing dragon! This viral sensation features 
+            <span class="text-white font-semibold">Toothless</span>, the Night Fury from DreamWorks' <em>How to Train Your Dragon</em> franchise, 
+            grooving rhythmically to the infectious <span class="text-white font-semibold">"Driftveil City"</span> theme from <em>Pokémon Black & White</em>.
+          </p>
+          
+          <div>
+            <h2 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
+              <i class="fa-solid fa-film text-purple-400"></i> Origin of the Animation
+            </h2>
+            <p>
+              The iconic dancing sequence isn't from the official movies. It originates from a parody video by the talented Dutch animator and YouTuber 
+              <strong class="text-white">Cas van de Pol</strong>. His video, titled <em>"The Ultimate Recap of How To Train Your Dragon,"</em> was uploaded in December 2023. 
+              At the timestamp <strong>1:44</strong>, Toothless performs a fluid, hip-swaying dance that instantly captured the internet's heart with its goofy charm and smooth frame-by-frame animation.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
+              <i class="fa-solid fa-music text-green-400"></i> The Music: Driftveil City
+            </h2>
+            <p>
+              The backing track that makes this meme irresistible is the <strong>Driftveil City</strong> theme from the Nintendo DS games <em>Pokémon Black & White</em> (2010). 
+              Composed by <strong class="text-white">Hitomi Sato</strong>, this upbeat, jazzy, and bass-heavy track fits the dragon's dance moves perfectly, creating a satisfying audiovisual sync that fans can watch for hours.
+            </p>
+          </div>
+          
+          <div>
+            <h2 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
+              <i class="fa-solid fa-globe text-blue-400"></i> Cultural Impact
+            </h2>
+            <p>
+              Since its debut, the "Dancing Toothless" meme has exploded across platforms like TikTok, Discord, Twitter, and Instagram Reels. 
+              Creators have utilized green screen templates to place the dancing dragon in absurd locations—from Minecraft villages to Times Square. 
+              It has become a symbol of pure, unadulterated joy on the internet, often accompanied by captions about "brain rot" or simply enjoying the vibe.
+              <br><br>
+              <a href="https://knowyourmeme.com/memes/dancing-toothless" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 underline transition-colors">
+                Read more on Know Your Meme <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1"></i>
+              </a>
+            </p>
+          </div>
+
+          <div class="p-4 bg-gray-800/50 rounded-lg border border-gray-700 grid grid-cols-2 gap-4 text-sm">
+            <div>
+              <h3 class="font-bold text-white mb-1">Meme Details</h3>
+              <ul class="space-y-1">
+                <li><span class="text-gray-500">Character:</span> Toothless (Night Fury)</li>
+                <li><span class="text-gray-500">Source:</span> Cas van de Pol (YouTube)</li>
+                <li><span class="text-gray-500">Date:</span> Dec 2023</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-bold text-white mb-1">Music Details</h3>
+              <ul class="space-y-1">
+                <li><span class="text-gray-500">Song:</span> Driftveil City Theme</li>
+                <li><span class="text-gray-500">Game:</span> Pokémon Black & White</li>
+                <li><span class="text-gray-500">Composer:</span> Hitomi Sato</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="pt-4 border-t border-gray-700">
+            <h2 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
+              <i class="fa-solid fa-download text-yellow-400"></i> Creator Resources
+            </h2>
+            <div class="flex flex-wrap gap-3">
+              <a href="https://www.youtube.com/watch?v=4dDUWRWqcIo" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2 bg-red-600/20 hover:bg-red-600/40 text-red-200 rounded-lg transition-colors border border-red-600/30">
+                <i class="fa-brands fa-youtube"></i> Original Animation
+              </a>
+              <a href="https://www.youtube.com/watch?v=9MCiixIkzUk&t=6s" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2 bg-green-600/20 hover:bg-green-600/40 text-green-200 rounded-lg transition-colors border border-green-600/30">
+                <i class="fa-solid fa-file-video"></i> Green Screen Video
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div id="wrapper" class="opacity-60 transition-opacity">
       <video
         muted
         autoplay
         loop
+        poster="./assets/og-image.jpg"
         class="object-cover w-full h-full fixed top-0 left-0 z-0"
       >
         Your browser does not support the video tag.
-        <source src="https://videos.lulu.cloud/toothless-1hour-loop-720p.mp4" type="video/mp4" />
+        <source src="https://cdn.toothless.fun/toothless-1hour-loop-720p.mp4" type="video/mp4" />
       </video>
     </div>
   </body>
@@ -51,5 +220,17 @@
   ></script>
   <script src="./js/gtag.js"></script>
   <script src="./js/main.js"></script>
-  <script src="./js/title.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => {
+            console.log('ServiceWorker registration successful');
+          })
+          .catch(err => {
+            console.log('ServiceWorker registration failed: ', err);
+          });
+      });
+    }
+  </script>
 </html>
