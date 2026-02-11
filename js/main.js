@@ -96,9 +96,6 @@ async function installApp() {
   if (deferredPrompt) {
     deferredPrompt.prompt();
     const { outcome } = await deferredPrompt.userChoice;
-    if (outcome === 'accepted') {
-      console.log('User accepted the install prompt');
-    }
     deferredPrompt = null;
     installBtn.classList.add('hidden');
     

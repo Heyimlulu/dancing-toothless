@@ -28,6 +28,10 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="Toothless" />
     <link rel="manifest" href="/icons/site.webmanifest" />
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="./assets/og-image.jpg" as="image">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4" as="script">
 
     <script type="application/ld+json">
     {
@@ -49,11 +53,19 @@
     </script>
     <link rel="shortcut icon" href="./icons/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./css/mobile.css" />
+    
+    <!-- Non-blocking FontAwesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      media="print"
+      onload="this.media='all'"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <noscript>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    </noscript>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
       /* Hide scrollbar for Chrome, Safari and Opera */
       ::-webkit-scrollbar {
@@ -109,13 +121,13 @@
 
     <!-- Social Share Buttons -->
     <div class="fixed right-6 top-6 z-20 flex flex-col gap-3">
-      <a href="https://twitter.com/intent/tweet?text=Check%20out%20Dancing%20Toothless%20%F0%9F%90%B2%20https%3A%2F%2Ftoothless.fun" target="_blank" rel="noopener noreferrer" class="w-12 h-12 flex items-center justify-center bg-black/50 text-white hover:bg-[#1DA1F2] rounded-full transition-all hover:scale-110 backdrop-blur-sm">
+      <a href="https://twitter.com/intent/tweet?text=Check%20out%20Dancing%20Toothless%20%F0%9F%90%B2%20https%3A%2F%2Ftoothless.fun" target="_blank" rel="noopener noreferrer" class="w-12 h-12 flex items-center justify-center bg-black/50 text-white hover:bg-[#1DA1F2] rounded-full transition-all hover:scale-110 backdrop-blur-sm" aria-label="Share on Twitter">
         <i class="fa-brands fa-twitter text-xl"></i>
       </a>
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftoothless.fun" target="_blank" rel="noopener noreferrer" class="w-12 h-12 flex items-center justify-center bg-black/50 text-white hover:bg-[#4267B2] rounded-full transition-all hover:scale-110 backdrop-blur-sm">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftoothless.fun" target="_blank" rel="noopener noreferrer" class="w-12 h-12 flex items-center justify-center bg-black/50 text-white hover:bg-[#4267B2] rounded-full transition-all hover:scale-110 backdrop-blur-sm" aria-label="Share on Facebook">
         <i class="fa-brands fa-facebook-f text-xl"></i>
       </a>
-      <a href="#" onclick="copyLink(event)" class="w-12 h-12 flex items-center justify-center bg-black/50 text-white hover:bg-green-600 rounded-full transition-all hover:scale-110 backdrop-blur-sm group relative">
+      <a href="#" onclick="copyLink(event)" class="w-12 h-12 flex items-center justify-center bg-black/50 text-white hover:bg-green-600 rounded-full transition-all hover:scale-110 backdrop-blur-sm group relative" aria-label="Copy Link">
         <i class="fa-solid fa-link text-xl"></i>
         <span class="absolute right-full mr-2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Copy Link</span>
       </a>
@@ -235,12 +247,6 @@
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/sw.js')
-          .then(registration => {
-            console.log('ServiceWorker registration successful');
-          })
-          .catch(err => {
-            console.log('ServiceWorker registration failed: ', err);
-          });
       });
     }
   </script>

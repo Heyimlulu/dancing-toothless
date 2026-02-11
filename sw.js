@@ -1,4 +1,4 @@
-const CACHE_NAME = "toothless-v2";
+const CACHE_NAME = "toothless-v3";
 const ASSETS_TO_CACHE = [
   "/",
   "/index.html",
@@ -8,9 +8,7 @@ const ASSETS_TO_CACHE = [
   "/icons/favicon.ico",
   "/icons/favicon-96x96.png",
   "/icons/web-app-manifest-192x192.png",
-  "/icons/site.webmanifest",
-  "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css",
-  "https://cdn.tailwindcss.com"
+  "/icons/site.webmanifest"
 ];
 
 // Install event - cache assets
